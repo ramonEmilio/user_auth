@@ -18,7 +18,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Manage application settings in dotfiles
 gem 'dotenv-rails', '>= 2.7'
 
-gem 'pwned', '~> 1.2.1'
+gem 'jwt'
+gem "olive_branch"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

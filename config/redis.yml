@@ -1,5 +1,5 @@
 default: &default
-  host: localhost
+  host: <%= ENV['REDIS_HOST'] %>
   port: 6379
   db: 0
 development:
