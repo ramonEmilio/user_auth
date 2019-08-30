@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "0d2fc104-cb6f-48bc-b223-e114041e78da",
+		"name": "user_authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "session",
+					"item": [
+						{
+							"name": "session_create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"adminUser\": \"ramon\",\n\t\"password\": \"test\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/admin/sessions",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"sessions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "session_destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZmU0MjdlOTYtZGU1ZC00YzFhLThjM2EtZDVkODhhY2FlMjVlIiwiYWRtaW4iOnRydWUsImV4cCI6MTU2NzIzMDY5OX0.cl2GNYbUF0PMU6uK8MSxz2vvKP2A9Qp941duQWY9J_Q",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/admin/sessions/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"sessions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNDRmZTlkMWYtZjBlNS00NDQ5LWI4ZTYtN2ZlYzdmM2UzMWMxIiwiYWRtaW4iOnRydWUsImV4cCI6MTU2NzIzNTY1Mn0.bh3cas69SxESmo8BkEZkE3LoFenFmvMsuzjLyvWR3XA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/admin/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNmEzODcyOTAtZmVhZC00Y2ViLWFiZWMtMWEwMDViYzg3YTQ5IiwiYWRtaW4iOnRydWUsImV4cCI6MTU2NzIzMTQ2MH0.JOPVzSNHlxn_eiZfMkjjm0o7eZbSUeLgygDnGdRkhfI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/admin/users/ramones123",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"users",
+										"ramones123"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNmEzODcyOTAtZmVhZC00Y2ViLWFiZWMtMWEwMDViYzg3YTQ5IiwiYWRtaW4iOnRydWUsImV4cCI6MTU2NzIzMTQ2MH0.JOPVzSNHlxn_eiZfMkjjm0o7eZbSUeLgygDnGdRkhfI",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"tokenUuid\": \"c04e1b54-02b2-4570-9861-c4370705708c\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/admin/users/ramones123/logout",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"users",
+										"ramones123",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "tokens",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNmEzODcyOTAtZmVhZC00Y2ViLWFiZWMtMWEwMDViYzg3YTQ5IiwiYWRtaW4iOnRydWUsImV4cCI6MTU2NzIzMTQ2MH0.JOPVzSNHlxn_eiZfMkjjm0o7eZbSUeLgygDnGdRkhfI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/admin/tokens",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"tokens"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user_create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"ramones123\",\n\t\"password\": \"caribouAT&23\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJhbW9uZXMxMjMiLCJ1dWlkIjoiOTA4NjZlYWQtZDQzNC00ZmNkLWE2ZjQtMjNhYjQxMTRiODUwIiwiZXhwIjoxNTY3MjMxMDg4fQ.tLmXsissr8Q50PC2I4deEr0Dt97x67EK2eA8aMZw7ys",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/ramones123",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"ramones123"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "credentials",
+			"item": [
+				{
+					"name": "verify_credentials",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"ramones123\",\n\t\"password\": \"caribouAT&23\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/credentials/verify",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"credentials",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "session",
+			"item": [
+				{
+					"name": "session_create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"ramones123\",\n\t\"password\": \"caribouAT&23\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/sessions",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "session_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJhbW9uZXMxMjMiLCJ1dWlkIjoiOTA4NjZlYWQtZDQzNC00ZmNkLWE2ZjQtMjNhYjQxMTRiODUwIiwiZXhwIjoxNTY3MjMxMDg4fQ.tLmXsissr8Q50PC2I4deEr0Dt97x67EK2eA8aMZw7ys",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/sessions/5f8b111421a6486cBae3B5390bcddb7c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions",
+								"5f8b111421a6486cBae3B5390bcddb7c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/seed",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

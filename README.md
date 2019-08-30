@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Synopsis
 
-Things you may want to cover:
+This tool is intended to be a prototype for a JWT manager service.
+The service can create users, give users JWT, and revoke those tokens when
+needed. The service has a normal api and an admin api.
 
-* Ruby version
+## Configuration
 
-* System dependencies
+run `docker-compose up` from the project root
 
-* Configuration
+## Database 
 
-* Database creation
+The service uses Redis as a back end. Once running visit /seed to create 10
+user on the fly.
 
-* Database initialization
+## Interaction
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Use Postman to interact with the API in a development environment. The postman
+collection is found in the root of the repo. You can import it to your postman
+and start testing the API.
